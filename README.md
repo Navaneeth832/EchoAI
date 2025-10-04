@@ -165,7 +165,3 @@ Feel free to open an issue or submit a pull request 💬
 Licensed under the **MIT License**.
 Free for personal and educational use.
 
----
-
-Would you like me to add a **“Demo Usage Example” section** (like showing sample request & response JSON for `/generate_diary` and `/entries`)?
-It would make your README look even more professional — especially for GitHub visitors.
