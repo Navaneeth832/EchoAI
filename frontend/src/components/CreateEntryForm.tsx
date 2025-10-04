@@ -54,7 +54,7 @@ export const CreateEntryForm = ({ onClose, onSuccess }: CreateEntryFormProps) =>
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <div className="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Sparkles className="text-blue-600" size={24} />
+            <Sparkles className="text-red-600" size={24} />
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Create New Diary Entry</h2>
           </div>
           <button
@@ -74,7 +74,7 @@ export const CreateEntryForm = ({ onClose, onSuccess }: CreateEntryFormProps) =>
             <textarea
               value={formData.q1}
               onChange={(e) => handleChange('q1', e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
               rows={4}
               placeholder="Describe your day..."
               disabled={isLoading}
@@ -88,7 +88,7 @@ export const CreateEntryForm = ({ onClose, onSuccess }: CreateEntryFormProps) =>
             <textarea
               value={formData.q2}
               onChange={(e) => handleChange('q2', e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
               rows={4}
               placeholder="Any special moments or events..."
               disabled={isLoading}
@@ -102,7 +102,7 @@ export const CreateEntryForm = ({ onClose, onSuccess }: CreateEntryFormProps) =>
             <textarea
               value={formData.q3}
               onChange={(e) => handleChange('q3', e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
               rows={4}
               placeholder="Learning, projects, or skills you worked on..."
               disabled={isLoading}
@@ -132,7 +132,7 @@ export const CreateEntryForm = ({ onClose, onSuccess }: CreateEntryFormProps) =>
             </button>
             <button
               type="submit"
-              className="flex-1 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors font-medium flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={isLoading}
             >
               {isLoading ? (

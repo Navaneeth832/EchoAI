@@ -18,7 +18,7 @@ def generate_journal_entry(q1, q2, q3):
         - How was your day? {q1}
         - Anything special? {q2}
         - Upskilling work? {q3}
-        Write it like a reflective journal entry.
+        Write it like a reflective journal entry.Dont add any extra text and date only the pure journel.
         """
     try:
         model_name ="gemini-2.5-flash"

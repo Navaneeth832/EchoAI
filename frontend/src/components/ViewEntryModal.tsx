@@ -55,7 +55,7 @@ export const ViewEntryModal = ({ filename, onClose }: ViewEntryModalProps) => {
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         <div className="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Calendar className="text-blue-600" size={24} />
+            <Calendar className="text-red-600" size={24} />
             <div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Diary Entry</h2>
               {entry && (
@@ -76,7 +76,7 @@ export const ViewEntryModal = ({ filename, onClose }: ViewEntryModalProps) => {
         <div className="p-6">
           {isLoading && (
             <div className="flex items-center justify-center py-12">
-              <Loader2 className="animate-spin text-blue-600" size={48} />
+              <Loader2 className="animate-spin text-red-600" size={48} />
             </div>
           )}
 
@@ -109,7 +109,7 @@ export const ViewEntryModal = ({ filename, onClose }: ViewEntryModalProps) => {
               <div className="flex gap-3">
                 <button
                   onClick={handleDownload}
-                  className="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+                  className="flex-1 flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
                 >
                   <Download size={20} />
                   Download Text File

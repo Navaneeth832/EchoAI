@@ -36,7 +36,7 @@ export const EntryCard = ({ entry, onPlayAudio, onViewEntry }: EntryCardProps) =
       <div className="flex gap-3">
         <button
           onClick={() => onPlayAudio(entry.audio_file)}
-          className="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg transition-colors font-medium"
+          className="flex-1 flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-lg transition-colors font-medium"
         >
           <Play size={18} />
           Play Audio

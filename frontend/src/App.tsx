@@ -54,7 +54,7 @@ function App() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <BookOpen className="text-blue-600" size={32} />
+              <BookOpen className="text-red-600" size={32} />
               <div>
                 <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                   Dear Diary
@@ -68,7 +68,7 @@ function App() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setShowCreateForm(true)}
-                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 md:px-6 py-2.5 md:py-3 rounded-lg transition-colors font-medium shadow-lg hover:shadow-xl"
+                className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 md:px-6 py-2.5 md:py-3 rounded-lg transition-colors font-medium shadow-lg hover:shadow-xl"
               >
                 <PlusCircle size={20} />
                 <span className="hidden md:inline">New Entry</span>
@@ -90,7 +90,7 @@ function App() {
       <main className="container mx-auto px-4 py-8 md:py-12">
         {isLoading && (
           <div className="flex flex-col items-center justify-center py-20">
-            <Loader2 className="animate-spin text-blue-600 mb-4" size={48} />
+            <Loader2 className="animate-spin text-red-600 mb-4" size={48} />
             <p className="text-gray-600 dark:text-gray-400">Loading your diary entries...</p>
           </div>
         )}
@@ -126,7 +126,7 @@ function App() {
             </p>
             <button
               onClick={() => setShowCreateForm(true)}
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+              className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
             >
               <PlusCircle size={20} />
               Create First Entry

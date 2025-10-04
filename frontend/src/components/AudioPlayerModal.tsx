@@ -13,7 +13,7 @@ export const AudioPlayerModal = ({ audioFile, onClose }: AudioPlayerModalProps) 
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full">
         <div className="border-b border-gray-200 dark:border-gray-700 p-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Headphones className="text-blue-600" size={24} />
+            <Headphones className="text-red-600" size={24} />
             <h2 className="text-xl font-bold text-gray-900 dark:text-white">Play Audio</h2>
           </div>
           <button
