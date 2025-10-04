@@ -17,7 +17,7 @@ export const diaryApi = {
   },
 
   getEntryByDate: async (date: string): Promise<DiaryEntryDetail> => {
-    const response = await api.get<DiaryEntryDetail>(`/${date}`);
+    const response = await api.get<DiaryEntryDetail>(`/entry/${date}`);
     return response.data;
   },
 
@@ -29,7 +29,7 @@ export const diaryApi = {
   },
 
   getAudioUrl: (audioFile: string): string => {
-    return `${API_BASE_URL}/Audio_Diary/${audioFile}`;
+    return `${API_BASE_URL}/${audioFile}`;
   },
 
   getTextFileUrl: (date: string): string => {

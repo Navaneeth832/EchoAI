@@ -103,7 +103,7 @@ export const ViewEntryModal = ({ filename, onClose }: ViewEntryModalProps) => {
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   Audio Recording
                 </h3>
-                <AudioPlayer audioUrl={diaryApi.getAudioUrl(entry.audio_file)} />
+                <AudioPlayer audioUrl={diaryApi.getAudioUrl(entry.audio)} />
               </div>
 
               <div className="flex gap-3">

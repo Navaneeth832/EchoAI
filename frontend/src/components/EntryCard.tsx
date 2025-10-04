@@ -23,7 +23,7 @@ export const EntryCard = ({ entry, onPlayAudio, onViewEntry }: EntryCardProps) =
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
           <Calendar size={18} />
-          <span className="text-sm font-medium">{formatDate(entry.filename)}</span>
+          <span className="text-sm font-medium">{entry.filename}</span>
         </div>
       </div>
 

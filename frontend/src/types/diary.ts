@@ -7,7 +7,7 @@ export interface DiaryEntry {
 export interface DiaryEntryDetail {
   date: string;
   content: string;
-  audio_file: string;
+  audio: string;
 }
 
 export interface GenerateDiaryRequest {

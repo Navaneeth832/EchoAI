@@ -1,5 +1,6 @@
 
 from fastapi import FastAPI, Form, HTTPException
+from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import google.generativeai as genai
@@ -12,6 +13,7 @@ from write import generate_journal_entry,write_to_txt
 from audiomaker import generate_audio,wave_file
 
 app = FastAPI()
+app.mount("/Audio_Diary", StaticFiles(directory=os.path.join(os.path.dirname(__file__), "Audio_Diary")), name="Audio_Diary")
 
 # CORS middleware to allow requests from the frontend
 app.add_middleware(
@@ -38,7 +40,7 @@ class DiaryEntry(BaseModel):
 def generate_diary(q1: str, q2: str, q3: str) -> str:
     diary_contents=generate_journal_entry(q1, q2, q3)
     write_to_txt(datetime.now().strftime("%d-%m-%Y"), diary_contents)
-    #generate_audio(f"{DEAR_DIARY_DIR}/{datetime.now().strftime('%d-%m-%Y')}_diary.txt")
+    generate_audio(f"{DEAR_DIARY_DIR}/{datetime.now().strftime('%d-%m-%Y')}_diary.txt")
     return "Journal entry generated and saved."
 
 
@@ -60,14 +62,17 @@ async def get_entries():
 
 
 # --- STATIC FILES ---
-@app.get("/{filename}")
+@app.get("/entry/{filename}")
 async def read_frontend(filename: str):
     filename=f"Dear_Diary/{filename}"
     if os.path.exists(filename):
         with open(filename, 'r', encoding='utf-8') as file:
             content = file.read()
             print(content)
-        return JSONResponse(content={"filename": filename, "content": content})
+        audio_file=filename.replace("Dear_Diary","Audio_Diary").replace(".txt",".wav")
+        return JSONResponse(content={"filename": filename, "content": content,"audio":audio_file})
     else:
         raise HTTPException(status_code=404, detail="File not found")
 
+if __name__ == "__main__":
+    generate_audio(f"{DEAR_DIARY_DIR}/{datetime.now().strftime('%d-%m-%Y')}_diary.txt")

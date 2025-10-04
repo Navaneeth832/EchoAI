@@ -15,9 +15,8 @@ client = genai.Client()
 def generate_audio(file_location):
    try:
       date=file_location.split("/")[1].split("_")[0]
-      if os.exists(f"Audio_Diary/{date}_audio.wav") == True:
+      if os.path.exists(f"Audio_Diary/{date}_diary.wav") == True:
          print("Audio diary already exists for this date.")
-         os.system(f'start /min wmplayer "Audio_Diary/{date}_audio.wav"')
          exit()
       with open(file_location, 'r') as file:
          entries = file.readlines()
@@ -37,12 +36,10 @@ def generate_audio(file_location):
          )
       )
       data = response.candidates[0].content.parts[0].inline_data.data
-      wave_file(f"Audio_Diary/{date}_audio.wav", data) 
+      wave_file(f"Audio_Diary/{date}_diary.wav", data) 
       print("Audio diary created successfully!")
-      print("Playing the audio diary...")
-      os.system(f'start /min wmplayer "Audio_Diary/{date}_audio.wav"')
-
    except:
       print("Diary not available")
+      print(file_location)
 
 
