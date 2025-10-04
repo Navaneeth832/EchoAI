@@ -1,6 +1,6 @@
 # Ignore environment variables
 .env
-
+backend/.env
 # Ignore all files in Dear_Diary except .gitkeep
 Dear_Diary/*
 !Dear_Diary/.gitkeep
