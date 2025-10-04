@@ -2,15 +2,15 @@
 .env
 backend/.env
 # Ignore all files in Dear_Diary except .gitkeep
-Dear_Diary/*
-!Dear_Diary/.gitkeep
+backend/Dear_Diary/*
+!backend/Dear_Diary/.gitkeep
 
 # Ignore all files in Audio_Diary except .gitkeep
-Audio_Diary/*
-!Audio_Diary/.gitkeep
+backend/Audio_Diary/*
+!backend/Audio_Diary/.gitkeep
 
 # Common Python ignore patterns (optional but recommended)
-__pycache__/
+backend/__pycache__/
 *.pyc
 *.pyo
 *.pyd
